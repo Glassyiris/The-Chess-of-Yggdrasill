@@ -129,7 +129,7 @@ void chessboard::push(int x, int y, char dir, int camp) {
                         //因为是单向移动所以不需要交换，复制前一个值即可
                     else if (t * camp == 0) {
                         while (x1 < x) {
-                            board[x1][y1].chessType = board[x + 1][y1].chessType;
+                            board[x1][y1].chessType = board[x1 + 1][y1].chessType;
                             x1++;
                         }
                         board[x1][y1].chessType = 0;
@@ -145,7 +145,7 @@ void chessboard::push(int x, int y, char dir, int camp) {
                     if (t * camp == -3 || t * camp > 0) break;
                     else if (t * camp == 0) {
                         while (x1 > x) {
-                            board[x1][y1].chessType = board[x - 1][y1].chessType;
+                            board[x1][y1].chessType = board[x1 - 1][y1].chessType;
                             x1--;
                         }
                         board[x1][y1].chessType = 0;
