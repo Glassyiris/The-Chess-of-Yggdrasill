@@ -15,7 +15,7 @@ class single_play : public QMainWindow
 public:
     explicit single_play(QWidget *parent = nullptr);
     void refresh_board(chessboard * chessBoard);
-    ~single_play();
+    ~single_play() override;
 signals:
     void showmain();
 private:
